@@ -32,96 +32,64 @@ type Perfume = {
   price: number;
   tags: string[];
   image: string;
-  panel: string;
-  halo: string;
-  chip: string;
-  price_class: string;
-  button: string;
 };
 
 const perfumes: Perfume[] = [
   {
     name: "NOBEL",
-    size: "100 ML",
+    size: "100ML",
     price: 1499,
     tags: ["AQUATIC", "PARFUM", "MEN"],
     image: nobelImg,
-    panel:
-      "bg-[radial-gradient(120%_90%_at_50%_0%,var(--nobel-glow)_0%,var(--nobel-deep)_55%,oklch(0.16_0.07_264)_100%)]",
-    halo: "bg-nobel-glow/40",
-    chip: "border-nobel-accent/40 text-nobel-accent",
-    price_class: "text-nobel-accent",
-    button: "bg-nobel-accent/95 text-nobel-deep hover:bg-nobel-accent",
   },
   {
     name: "REGAL",
-    size: "100 ML",
+    size: "100ML",
     price: 1499,
     tags: ["ORCHID", "PARFUM", "WOMEN"],
     image: regalImg,
-    panel:
-      "bg-[radial-gradient(120%_90%_at_50%_0%,var(--regal-glow)_0%,var(--regal-deep)_55%,oklch(0.15_0.08_310)_100%)]",
-    halo: "bg-regal-glow/40",
-    chip: "border-regal-accent/45 text-regal-accent",
-    price_class: "text-regal-accent",
-    button: "bg-regal-accent/95 text-regal-deep hover:bg-regal-accent",
   },
   {
     name: "ROYAL",
-    size: "100 ML",
+    size: "100ML",
     price: 1499,
     tags: ["SAFFRON", "PARFUM", "UNISEX"],
     image: royalImg,
-    panel:
-      "bg-[radial-gradient(120%_90%_at_50%_0%,var(--royal-glow)_0%,var(--royal-deep)_55%,oklch(0.14_0.08_22)_100%)]",
-    halo: "bg-royal-glow/45",
-    chip: "border-royal-accent/45 text-royal-accent",
-    price_class: "text-royal-accent",
-    button: "bg-royal-accent/95 text-royal-deep hover:bg-royal-accent",
   },
 ];
 
 function PerfumeCard({ p, priority }: { p: Perfume; priority: boolean }) {
   return (
-    <article
-      className={`group relative overflow-hidden rounded-3xl ${p.panel} p-6 pb-8 shadow-2xl`}
-    >
-      <div
-        className={`pointer-events-none absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full ${p.halo} blur-3xl`}
-        aria-hidden="true"
-      />
-      <div className="relative flex items-center justify-center py-4">
+    <article className="group flex flex-col border border-border bg-card">
+      <div className="flex items-center justify-center bg-white p-6">
         <img
           src={p.image}
           alt={`${p.name} ${p.size} parfum bottle`}
           width={768}
           height={1024}
           loading={priority ? "eager" : "lazy"}
-          className="h-64 w-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:-translate-y-2"
+          className="h-72 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <div className="relative mt-4 text-center">
-        <h2 className="text-3xl font-semibold tracking-[0.35em] text-white">
-          {p.name}
+      <div className="flex flex-1 flex-col items-center gap-3 px-5 pb-6 pt-5 text-center">
+        <h2 className="text-lg tracking-wide text-foreground">
+          {p.name} ({p.size})
         </h2>
-        <p className="mt-1 text-xs tracking-[0.3em] text-white/60">{p.size}</p>
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           {p.tags.map((t) => (
             <span
               key={t}
-              className={`rounded-full border px-3 py-1 text-[10px] tracking-[0.2em] ${p.chip}`}
+              className="bg-muted px-3 py-1 text-[11px] tracking-wider text-muted-foreground"
             >
               {t}
             </span>
           ))}
         </div>
-        <p className={`mt-5 text-2xl font-medium ${p.price_class}`}>
-          ₹{p.price.toLocaleString("en-IN")}
+        <p className="mt-1 text-base text-foreground">
+          ₹ {p.price.toLocaleString("en-IN")}
         </p>
-        <button
-          className={`mt-5 w-full rounded-full px-6 py-3 text-xs font-semibold tracking-[0.25em] transition-colors ${p.button}`}
-        >
-          ADD TO CART
+        <button className="mt-1 bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+          Add To Cart
         </button>
       </div>
     </article>
@@ -130,22 +98,35 @@ function PerfumeCard({ p, priority }: { p: Perfume; priority: boolean }) {
 
 function Index() {
   return (
-    <main className="min-h-screen bg-[oklch(0.13_0.02_60)] px-5 py-16">
-      <header className="mx-auto max-w-5xl text-center">
-        <p className="text-xs tracking-[0.5em] text-white/50">SARKAR PARFUMS</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-[0.2em] text-white sm:text-5xl">
-          SHOP ALL
-        </h1>
-        <p className="mx-auto mt-4 max-w-md text-sm text-white/60">
-          Long-lasting 100ml parfums, each built around a single signature accord.
-        </p>
+    <div className="min-h-screen bg-background">
+      <header className="flex items-center justify-between border-b border-border px-5 py-4">
+        <button
+          aria-label="Open menu"
+          className="flex flex-col gap-1.5 p-1 text-foreground"
+        >
+          <span className="block h-0.5 w-6 bg-current" />
+          <span className="block h-0.5 w-6 bg-current" />
+          <span className="block h-0.5 w-6 bg-current" />
+        </button>
+        <span className="text-xl font-bold tracking-[0.35em] text-foreground sm:text-2xl">
+          SARKAR
+        </span>
+        <button className="bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
+          Buy Now
+        </button>
       </header>
 
-      <section className="mx-auto mt-14 grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {perfumes.map((p, i) => (
-          <PerfumeCard key={p.name} p={p} priority={i === 0} />
-        ))}
-      </section>
-    </main>
+      <main className="px-5 py-10">
+        <h1 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
+          SHOP THE COLLECTION
+        </h1>
+
+        <section className="mx-auto mt-10 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {perfumes.map((p, i) => (
+            <PerfumeCard key={p.name} p={p} priority={i === 0} />
+          ))}
+        </section>
+      </main>
+    </div>
   );
 }
