@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
         rel: "preload",
         as: "image",
         href: heroLineup.url,
-        fetchpriority: "high",
+        fetchPriority: "high",
       },
     ],
   }),
