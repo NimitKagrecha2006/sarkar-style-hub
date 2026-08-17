@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bottleOrion from "@/assets/bottle-orion.png.asset.json";
-import bottleNoble from "@/assets/bottle-noble.png.asset.json";
-import bottleThrone from "@/assets/bottle-throne.png.asset.json";
-import bottleRegal from "@/assets/bottle-regal.png.asset.json";
-import bottleRoyal from "@/assets/bottle-royal.png.asset.json";
-import sceneOrion from "@/assets/scene-orion.png.asset.json";
-import sceneNoble from "@/assets/scene-noble.png.asset.json";
-import sceneThrone from "@/assets/scene-throne.png.asset.json";
-import sceneRegal from "@/assets/scene-regal.png.asset.json";
-import sceneRoyal from "@/assets/scene-royal.png.asset.json";
+import heroLineup from "@/assets/hero-lineup.webp.asset.json";
+import bottleOrion from "@/assets/bottle-orion.webp.asset.json";
+import bottleNoble from "@/assets/bottle-noble.webp.asset.json";
+import bottleThrone from "@/assets/bottle-throne.webp.asset.json";
+import bottleRegal from "@/assets/bottle-regal.webp.asset.json";
+import bottleRoyal from "@/assets/bottle-royal.webp.asset.json";
+import sceneOrion from "@/assets/scene-orion.webp.asset.json";
+import sceneNoble from "@/assets/scene-noble.webp.asset.json";
+import sceneThrone from "@/assets/scene-throne.webp.asset.json";
+import sceneRegal from "@/assets/scene-regal.webp.asset.json";
+import sceneRoyal from "@/assets/scene-royal.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
