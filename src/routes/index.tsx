@@ -31,7 +31,15 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://www.sarkar.store/" }],
+    links: [
+      { rel: "canonical", href: "https://www.sarkar.store/" },
+      {
+        rel: "preload",
+        as: "image",
+        href: heroLineup.url,
+        fetchpriority: "high",
+      },
+    ],
   }),
 });
 
@@ -217,12 +225,12 @@ function Index() {
         </section>
 
 
-        <section id="collection" className="px-5 py-14">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <section id="collection" className="px-4 py-12 sm:px-5 sm:py-14">
+          <h2 className="text-center text-2xl font-bold tracking-tight text-foreground sm:text-5xl">
             SHOP THE COLLECTION
           </h2>
 
-          <div className="mx-auto mt-10 grid max-w-[1600px] gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mx-auto mt-8 grid max-w-[1600px] grid-cols-2 gap-3 sm:mt-10 sm:gap-6 lg:grid-cols-3 xl:grid-cols-5">
             {perfumes.map((p) => (
               <PerfumeCard key={p.name} p={p} />
             ))}
