@@ -91,7 +91,7 @@ const perfumes: Perfume[] = [
   },
 ];
 
-function PerfumeCard({ p, priority }: { p: Perfume; priority: boolean }) {
+function PerfumeCard({ p }: { p: Perfume }) {
   return (
     <article className="group flex flex-col border border-border bg-card">
       <div className="relative aspect-[3/4] overflow-hidden bg-white">
@@ -223,8 +223,8 @@ function Index() {
           </h2>
 
           <div className="mx-auto mt-10 grid max-w-[1600px] gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {perfumes.map((p, i) => (
-              <PerfumeCard key={p.name} p={p} priority={i === 0} />
+            {perfumes.map((p) => (
+              <PerfumeCard key={p.name} p={p} />
             ))}
           </div>
         </section>
