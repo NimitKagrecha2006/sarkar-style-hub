@@ -123,29 +123,30 @@ function PerfumeCard({ p }: { p: Perfume }) {
         />
 
       </div>
-      <div className="flex flex-1 flex-col items-center gap-3 px-5 pb-6 pt-5 text-center">
-        <h2 className="text-lg tracking-wide text-foreground">
+      <div className="flex flex-1 flex-col items-center gap-2 px-3 pb-4 pt-4 text-center sm:gap-3 sm:px-5 sm:pb-6 sm:pt-5">
+        <h2 className="text-sm tracking-wide text-foreground sm:text-lg">
           {p.name} ({p.size})
         </h2>
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2">
           {p.tags.map((t) => (
             <span
               key={t}
-              className="bg-muted px-3 py-1 text-[11px] tracking-wider text-muted-foreground"
+              className="bg-muted px-2 py-1 text-[9px] tracking-wider text-muted-foreground sm:px-3 sm:text-[11px]"
             >
               {t}
             </span>
           ))}
         </div>
-        <p className="mt-1 text-base text-foreground">
+        <p className="mt-1 text-sm text-foreground sm:text-base">
           ₹ {p.price.toLocaleString("en-IN")}
         </p>
         <a
           href={SHOP_URL}
-          className="mt-1 bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          className="mt-1 w-full bg-primary px-4 py-2.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:w-auto sm:px-6 sm:text-sm"
         >
           Add To Cart
         </a>
+
       </div>
     </article>
   );
