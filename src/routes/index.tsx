@@ -15,13 +15,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Sarkar Parfums — Shop the 100ml Chess King Collection" },
+      { title: "Sarkar Parfums — Chess King 100ml Parfum Collection" },
       {
         name: "description",
         content:
-          "Shop Sarkar 100ml parfums: ORION, NOBEL, THRONE, REGAL and ROYAL. Sculpted chess-king bottles from ₹1499.",
+          "Sarkar Parfums: sculpted chess-king bottles in 100ml. Discover ORION, NOBEL, THRONE, REGAL and ROYAL — long-lasting parfums from ₹1499.",
       },
-      { property: "og:title", content: "Sarkar Parfums — Shop the Collection" },
+      { property: "og:title", content: "Sarkar Parfums — Chess King Collection" },
       {
         property: "og:description",
         content:
@@ -30,8 +30,13 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://www.sarkar.store/" }],
   }),
 });
+
+const STORE_URL = "https://www.sarkar.store/";
+const SHOP_URL = "https://www.sarkar.store/collections/shop-all";
+
 
 type Perfume = {
   name: string;
