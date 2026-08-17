@@ -175,39 +175,51 @@ function Index() {
       </header>
 
       <main>
-        <section className="border-b border-border px-5 py-16 text-center sm:py-24">
-          <p className="text-[11px] tracking-[0.4em] text-muted-foreground">
-            EAU DE PARFUM · 100ML
-          </p>
-          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-6xl">
-            CROWNED IN SCENT.
-            <br />
-            SCULPTED LIKE A KING.
-          </h1>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Five signature parfums housed in hand-finished chess-king flacons.
-            Long-lasting, unisex, and made to be remembered.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a
-              href="#collection"
-              className="bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Shop the Collection
-            </a>
-            <a
-              href={STORE_URL}
-              className="border border-border px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-            >
-              Visit sarkar.store
-            </a>
-          </div>
-          <div className="mx-auto mt-12 grid max-w-3xl grid-cols-3 gap-4 text-[11px] tracking-widest text-muted-foreground">
-            <span>FREE SHIPPING</span>
-            <span>12H+ LONGEVITY</span>
-            <span>CRUELTY FREE</span>
+        <section className="border-b border-border">
+          <img
+            src={heroLineup.url}
+            alt="The five SARKAR chess-king parfum bottles — ORION, NOBEL, THRONE, REGAL and ROYAL — on dark stone pedestals"
+            width={1920}
+            height={960}
+            fetchPriority="high"
+            decoding="async"
+            className="h-[42vw] max-h-[520px] min-h-[180px] w-full object-cover"
+          />
+          <div className="px-4 py-12 text-center sm:px-5 sm:py-20">
+            <p className="text-[10px] tracking-[0.35em] text-muted-foreground sm:text-[11px] sm:tracking-[0.4em]">
+              EAU DE PARFUM · 100ML
+            </p>
+            <h1 className="mx-auto mt-4 max-w-4xl text-3xl font-bold leading-tight tracking-tight text-foreground sm:mt-5 sm:text-6xl">
+              CROWNED IN SCENT.
+              <br />
+              SCULPTED LIKE A KING.
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground sm:mt-5 sm:text-base">
+              Five signature parfums housed in hand-finished chess-king flacons.
+              Long-lasting, unisex, and made to be remembered.
+            </p>
+            <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:items-center">
+              <a
+                href="#collection"
+                className="bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                Shop the Collection
+              </a>
+              <a
+                href={STORE_URL}
+                className="border border-border px-7 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
+              >
+                Visit sarkar.store
+              </a>
+            </div>
+            <div className="mx-auto mt-10 grid max-w-3xl grid-cols-1 gap-3 text-[11px] tracking-widest text-muted-foreground sm:mt-12 sm:grid-cols-3 sm:gap-4">
+              <span>FREE SHIPPING</span>
+              <span>12H+ LONGEVITY</span>
+              <span>CRUELTY FREE</span>
+            </div>
           </div>
         </section>
+
 
         <section id="collection" className="px-5 py-14">
           <h2 className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
