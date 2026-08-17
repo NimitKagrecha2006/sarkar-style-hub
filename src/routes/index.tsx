@@ -98,19 +98,22 @@ function PerfumeCard({ p, priority }: { p: Perfume; priority: boolean }) {
         <img
           src={p.bottle}
           alt={`${p.name} ${p.size} parfum bottle`}
-          width={960}
-          height={1008}
-          loading={priority ? "eager" : "lazy"}
+          width={430}
+          height={450}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-contain p-4 transition-opacity duration-500 group-hover:opacity-0"
         />
         <img
           src={p.scene}
           alt={`${p.name} parfum bottle with its packaging`}
-          width={960}
-          height={1008}
+          width={450}
+          height={455}
           loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         />
+
       </div>
       <div className="flex flex-1 flex-col items-center gap-3 px-5 pb-6 pt-5 text-center">
         <h2 className="text-lg tracking-wide text-foreground">
