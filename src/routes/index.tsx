@@ -83,7 +83,7 @@ const perfumes: Perfume[] = [
   {
     name: "ROYAL",
     size: "100ML",
-    price: 1499,
+    price: 2499,
     tags: ["SAFFRON", "UNISEX", "PARFUM"],
     bottle: bottleRoyal.url,
     scene: sceneRoyal.url,
