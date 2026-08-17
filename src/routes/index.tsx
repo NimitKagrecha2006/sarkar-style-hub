@@ -143,36 +143,29 @@ function PerfumeCard({ p, priority }: { p: Perfume; priority: boolean }) {
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <header className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-background/90 px-5 py-4 backdrop-blur">
-        <nav className="hidden gap-6 text-xs tracking-widest text-muted-foreground md:flex">
+      <header className="sticky top-0 z-30 grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-b border-border bg-background/90 px-4 py-3 backdrop-blur sm:px-5 sm:py-4">
+        <nav className="flex min-w-0 gap-4 text-[10px] tracking-widest text-muted-foreground sm:gap-6 sm:text-xs">
           <a href="#collection" className="hover:text-foreground">
             COLLECTION
           </a>
-          <a href="#craft" className="hover:text-foreground">
+          <a href="#craft" className="hidden hover:text-foreground sm:inline">
             THE CRAFT
           </a>
           <a href="#faq" className="hover:text-foreground">
             FAQ
           </a>
         </nav>
-        <button
-          aria-label="Open menu"
-          className="flex flex-col gap-1.5 p-1 text-foreground md:hidden"
-        >
-          <span className="block h-0.5 w-6 bg-current" />
-          <span className="block h-0.5 w-6 bg-current" />
-          <span className="block h-0.5 w-6 bg-current" />
-        </button>
-        <span className="text-xl font-bold tracking-[0.35em] text-foreground sm:text-2xl">
+        <span className="whitespace-nowrap text-lg font-bold tracking-[0.3em] text-foreground sm:text-2xl sm:tracking-[0.35em]">
           SARKAR
         </span>
         <a
           href={STORE_URL}
-          className="bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+          className="justify-self-end whitespace-nowrap bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground sm:px-4 sm:text-sm"
         >
           Buy Now
         </a>
       </header>
+
 
       <main>
         <section className="border-b border-border">
