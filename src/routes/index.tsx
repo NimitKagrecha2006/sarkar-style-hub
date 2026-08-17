@@ -33,12 +33,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://www.sarkar.store/" },
-      {
-        rel: "preload",
-        as: "image",
-        href: heroLineup.url,
-        fetchPriority: "high",
-      },
+      { rel: "preload", as: "image", href: heroLineup.url },
     ],
   }),
 });
