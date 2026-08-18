@@ -179,8 +179,9 @@ function Index() {
           <img
             src={heroLineup.url}
             alt="The five SARKAR chess-king parfum bottles — ORION, NOBEL, THRONE, REGAL and ROYAL — on dark stone pedestals"
-            width={1920}
-            height={960}
+            width={1772}
+            height={788}
+
             loading="eager"
             decoding="async"
             className="h-[42vw] max-h-[520px] min-h-[180px] w-full object-cover"
