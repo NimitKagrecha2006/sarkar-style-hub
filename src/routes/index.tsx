@@ -97,7 +97,7 @@ const perfumes: Perfume[] = [
 function PerfumeCard({ p }: { p: Perfume }) {
   return (
     <article className="group flex flex-col border border-border bg-card">
-      <div className="relative aspect-[3/4] overflow-hidden bg-white">
+      <div className="relative aspect-[3/4] overflow-hidden bg-neutral-900">
         <img
           src={p.bottle}
           alt={`${p.name} ${p.size} parfum bottle`}
