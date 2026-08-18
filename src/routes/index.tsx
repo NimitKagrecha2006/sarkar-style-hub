@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import heroLineup from "@/assets/hero-lineup.webp.asset.json";
-import bottleOrion from "@/assets/bottle-orion.webp.asset.json";
-import bottleNoble from "@/assets/bottle-noble.webp.asset.json";
-import bottleThrone from "@/assets/bottle-throne.webp.asset.json";
-import bottleRegal from "@/assets/bottle-regal.webp.asset.json";
-import bottleRoyal from "@/assets/bottle-royal.webp.asset.json";
+import bottleOrion from "@/assets/bottle-orion-king.webp.asset.json";
+import bottleNoble from "@/assets/bottle-noble-king.webp.asset.json";
+import bottleThrone from "@/assets/bottle-throne-king.webp.asset.json";
+import bottleRegal from "@/assets/bottle-regal-king.webp.asset.json";
+import bottleRoyal from "@/assets/bottle-royal-king.webp.asset.json";
 import sceneOrion from "@/assets/scene-orion.webp.asset.json";
 import sceneNoble from "@/assets/scene-noble.webp.asset.json";
 import sceneThrone from "@/assets/scene-throne.webp.asset.json";
@@ -105,7 +105,7 @@ function PerfumeCard({ p }: { p: Perfume }) {
           height={450}
           loading="lazy"
           decoding="async"
-          className="absolute inset-0 h-full w-full object-contain p-4 transition-opacity duration-500 group-hover:opacity-0"
+          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-0"
         />
         <img
           src={p.scene}
