@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sarkar Parfums: sculpted chess-king bottles in 100ml. Discover ORION, NOBEL, THRONE, REGAL and ROYAL — long-lasting parfums from ₹1499.",
+          "Sarkar Parfums: sculpted chess-king bottles in 100ml. Discover ORION, NOBEL, THRONE, REGAL and ROYAL — long-lasting parfums from ₹2499.",
       },
       { property: "og:title", content: "Sarkar Parfums — Chess King Collection" },
       {
@@ -55,7 +55,7 @@ const perfumes: Perfume[] = [
   {
     name: "ORION",
     size: "100ML",
-    price: 1499,
+    price: 2499,
     tags: ["FRESH", "UNISEX", "PARFUM"],
     bottle: bottleOrion.url,
     scene: sceneOrion.url,
@@ -63,7 +63,7 @@ const perfumes: Perfume[] = [
   {
     name: "NOBEL",
     size: "100ML",
-    price: 1499,
+    price: 2499,
     tags: ["CITRUS", "UNISEX", "PARFUM"],
     bottle: bottleNoble.url,
     scene: sceneNoble.url,
@@ -71,7 +71,7 @@ const perfumes: Perfume[] = [
   {
     name: "THRONE",
     size: "100ML",
-    price: 2499,
+    price: 3499,
     tags: ["LEATHER", "UNISEX", "PARFUM"],
     bottle: bottleThrone.url,
     scene: sceneThrone.url,
@@ -79,7 +79,7 @@ const perfumes: Perfume[] = [
   {
     name: "REGAL",
     size: "100ML",
-    price: 1499,
+    price: 2499,
     tags: ["OUD", "UNISEX", "PARFUM"],
     bottle: bottleRegal.url,
     scene: sceneRegal.url,
@@ -87,7 +87,7 @@ const perfumes: Perfume[] = [
   {
     name: "ROYAL",
     size: "100ML",
-    price: 2499,
+    price: 3499,
     tags: ["SAFFRON", "UNISEX", "PARFUM"],
     bottle: bottleRoyal.url,
     scene: sceneRoyal.url,
@@ -320,4 +320,3 @@ function Index() {
     </div>
   );
 }
-
