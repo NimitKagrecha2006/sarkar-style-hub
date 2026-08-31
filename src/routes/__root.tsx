@@ -77,14 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Sarkar Parfums" },
+      { name: "description", content: "Sarkar Parfums — Chess King 100ml Parfum Collection" },
+      { name: "author", content: "Sarkar Parfums" },
+      { name: "google-site-verification", content: "YZDpzBkyS3E0VgMt7yjlAXyL7h23mdpgZ6BMX3SoyK4" },
+      { property: "og:title", content: "Sarkar Parfums" },
+      { property: "og:description", content: "Five signature parfums housed in hand-finished chess-king flacons." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@SarkarParfums" },
     ],
     links: [
       {
